@@ -27,8 +27,8 @@ public class LicenseService {
 
     private static final Logger logger = LoggerFactory.getLogger(LicenseService.class);
 
-    @CircuitBreaker(name = "licenseService", fallbackMethod = "buildFallbackLicenseCircuitBreaker")
-    @Retry(name = "retryLicenseService", fallbackMethod = "buildFallbackLicenseRetry")
+//    @CircuitBreaker(name = "licenseService", fallbackMethod = "buildFallbackLicenseCircuitBreaker")
+//    @Retry(name = "retryLicenseService", fallbackMethod = "buildFallbackLicenseRetry")
 //    @Bulkhead(name = "bulkheadLicenseService", type= Bulkhead.Type.THREADPOOL, fallbackMethod = "buildFallbackLicense")
     public License getLicense(String licenseId, String organizationId, String clientType) {
         License license = this.findByOrganizationId(organizationId);

@@ -76,7 +76,7 @@ public class Examples {
 
   void basicExample_TimeoutException() {
     TimeLimiterConfig config = TimeLimiterConfig.custom()
-        .timeoutDuration(Duration.ofMillis(500))
+        .timeoutDuration(Duration.ofMillis(50))
         .build();
 
     TimeLimiterRegistry registry = TimeLimiterRegistry.of(config);
@@ -278,26 +278,26 @@ public class Examples {
 
   public static void main(String[] args) {
     Examples examples = new Examples();
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("----------------------- printDefaultValues ----------------------------------------------------");
-    examples.printDefaultValues();
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("----------------------- whenToUseExample ----------------------------------------------------");
-    examples.whenToUseExample();
-    delay(2); // delay just to let the above async operation to complete
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("----------------------- whenToUseExample_Blocking ----------------------------------------------------");
-    try {
-      examples.whenToUseExample_Blocking();
-    } catch (InterruptedException | ExecutionException| TimeoutException e) {
-      e.printStackTrace();
-    }
-    delay(2); // delay just to let the above async operation to complete
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("----------------------- basicExample_Successful ----------------------------------------------------");
-    examples.basicExample_Successful();
-
-    delay(2); // delay just to let the above async operation to complete
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------- printDefaultValues ----------------------------------------------------");
+//    examples.printDefaultValues();
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------- whenToUseExample ----------------------------------------------------");
+//    examples.whenToUseExample();
+//    delay(2); // delay just to let the above async operation to complete
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------- whenToUseExample_Blocking ----------------------------------------------------");
+//    try {
+//      examples.whenToUseExample_Blocking();
+//    } catch (InterruptedException | ExecutionException| TimeoutException e) {
+//      e.printStackTrace();
+//    }
+//    delay(2); // delay just to let the above async operation to complete
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------- basicExample_Successful ----------------------------------------------------");
+//    examples.basicExample_Successful();
+//
+//    delay(2); // delay just to let the above async operation to complete
 
     System.out.println("----------------------------------------------------------------------------------------------------");
     System.out.println("----------------------- basicExample_TimeoutException ----------------------------------------------");
@@ -305,20 +305,20 @@ public class Examples {
 
     delay(2); // delay just to let the above async operation to complete
 
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("-------------------------basicExample_ExcecuteCompletionStage --------------------------------------");
-    examples.basicExample_ExcecuteCompletionStage();
-
-    delay(2); // delay just to let the above async operation to complete
-
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("----------------------- eventsExample ----------------------------------------------------");
-    examples.eventsExample();
-    delay(10); // delay just to let the above async operation to complete
-    System.out.println("----------------------------------------------------------------------------------------------------");
-    System.out.println("----------------------- metricsExample ----------------------------------------------------");
-    examples.metricsExample();
-    delay(10); // delay just to let the above async operation to complete
-    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("-------------------------basicExample_ExcecuteCompletionStage --------------------------------------");
+//    examples.basicExample_ExcecuteCompletionStage();
+//
+//    delay(2); // delay just to let the above async operation to complete
+//
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------- eventsExample ----------------------------------------------------");
+//    examples.eventsExample();
+//    delay(10); // delay just to let the above async operation to complete
+//    System.out.println("----------------------------------------------------------------------------------------------------");
+//    System.out.println("----------------------- metricsExample ----------------------------------------------------");
+//    examples.metricsExample();
+//    delay(10); // delay just to let the above async operation to complete
+//    System.out.println("----------------------------------------------------------------------------------------------------");
   }
 }
